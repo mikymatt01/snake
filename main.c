@@ -46,7 +46,7 @@ void* play(void *arg){
     while(out(h, d)){
         resetcursor();
         fflush(stdout);
-        wait();
+        waitFor();
         print(queue, h, ' ');
         addHead(queue, *cmd);
         removeLast(queue);
@@ -80,7 +80,7 @@ int main(int argc, char* argv[]) {
         Drawer d = newDrawer(WIDTH, HEIGHT);
         Drawer h = newDrawer(WIDTH/2,HEIGHT/2);
         Drawer a;
-        char cmd;
+        char cmd = 'w';
         drawPlayground(d);
         draw(h, 'o');
         a=createapple(d);

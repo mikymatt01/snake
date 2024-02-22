@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "drawer.h"
 
-#define SLEEP 50000000
+#define SLEEP 10000
 
 int getch() {
    struct termios oldtc;
@@ -81,6 +81,7 @@ Drawer createapple(Drawer d){
     return apple;
 }
 
-void wait(){
-    for(int i=0;i<SLEEP;i++);
+void waitFor(){
+    for(int j=0; j<SLEEP; j++)
+        for(int i=0;i<SLEEP;i++);
 }
